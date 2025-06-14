@@ -1,38 +1,62 @@
 ---
 import Counter from '../components/Counter.svelte';
+import Card from '../components/Card.svelte';
+import ResponsiveGrid from '../components/ResponsiveGrid.svelte';
+import '../styles/global.css';
+
+const sampleItems = [
+  {
+    id: 1,
+    title: "TailwindCSS",
+    description: "ユーティリティファーストのCSSフレームワーク"
+  },
+  {
+    id: 2,
+    title: "Svelte 5",
+    description: "新しいリアクティビティシステム「Runes」を採用"
+  },
+  {
+    id: 3,
+    title: "Astro",
+    description: "モダンな静的サイトジェネレーター"
+  }
+];
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + Svelte Demo</title>
-	</head>
-	<body>
-		<main>
-		  <h1>Astro + Svelte 開発環境</h1>
-		  <Counter client:load />
-		</main>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro + Svelte Demo</title>
+    <script src="../scripts/theme.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900">
+    <main class="container mx-auto px-4 py-8 space-y-12">
+      <h1 class="text-4xl font-bold text-center text-gray-800 dark:text-white mb-8">Astro + Svelte + TailwindCSS</h1>
+      
+      <section class="max-w-md mx-auto">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4 text-center">Counter</h2>
+        <Counter client:load />
+      </section>
 
-		<style>
-		  body {
-		    font-family: system-ui, sans-serif;
-		    max-width: 800px;
-		    margin: 0 auto;
-		    padding: 2rem;
-		    line-height: 1.6;
-		  }
-		  
-		  main {
-		    text-align: center;
-		  }
-		  
-		  h1 {
-		    color: #333;
-		    margin-bottom: 1rem;
-		  }
-		</style>
-	</body>
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6 text-center">Card</h2>
+        <div class="max-w-sm mx-auto">
+          <Card 
+            title="TailwindCSS 導入完了" 
+            description="Astro + Svelte環境にTailwindCSSが正常に統合されました。レスポンシブデザインとダークモードに対応しています。"
+            buttonText="詳細を確認"
+            client:load 
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6 text-center">Responsive Grid</h2>
+        <ResponsiveGrid items={sampleItems} client:load />
+      </section>
+    </main>
+  </body>
 </html>
