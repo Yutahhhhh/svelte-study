@@ -12,7 +12,7 @@
   }>();
 </script>
 
-<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="card-interactive overflow-hidden">
   {#if imageUrl}
     <img 
       src={imageUrl} 
@@ -22,17 +22,15 @@
   {/if}
   
   <div class="p-6">
-    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+    <h3 class="heading-3 mb-2">
       {title}
     </h3>
     
-    <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+    <p class="body-text mb-4">
       {description}
     </p>
     
-    <button 
-      class="bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-medium px-4 py-2 rounded transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
-    >
+    <button class="btn-primary">
       {buttonText}
     </button>
   </div>

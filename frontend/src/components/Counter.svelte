@@ -14,25 +14,25 @@
   }
 </script>
 
-<div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-lg">
-  <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Svelte Counter Component</h2>
-  <p class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Count: {count}</p>
-  <div class="flex gap-3 justify-center">
+<div class="card p-6">
+  <h2 class="heading-3 mb-4">Svelte Counter Component</h2>
+  <p class="text-3xl font-bold mb-6 text-center">Count: {count}</p>
+  <div class="flex-center gap-3">
     <button 
       onclick={increment}
-      class="bg-green-500 hover:bg-green-600 text-white font-medium px-4 py-2 rounded transition-colors duration-200"
+      class="btn-primary"
     >
       +
     </button>
     <button 
       onclick={decrement}
-      class="bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded transition-colors duration-200"
+      class="btn-primary"
     >
       -
     </button>
     <button 
       onclick={reset}
-      class="bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded transition-colors duration-200"
+      class="btn-secondary"
     >
       Reset
     </button>
