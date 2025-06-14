@@ -52,3 +52,4 @@ pnpm dev --host
 
 - [Astro公式ドキュメント](https://docs.astro.build/ja/)
 - [Svelte統合ガイド](https://docs.astro.build/ja/guides/integrations-guide/svelte/)
+# svelte-study
