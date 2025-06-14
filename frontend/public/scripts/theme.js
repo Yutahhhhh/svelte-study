@@ -4,20 +4,18 @@
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
 
+  // data-theme属性でのテーマ適用
   function applyTheme(isDark) {
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   }
 
   function initTheme() {
+    // システムテーマに従う
     const isDark = getSystemTheme();
     applyTheme(isDark);
   }
 
-  // システムテーマの変更を監視して、リアルタイムに反映
+  // システムテーマの変更監視
   function watchSystemTheme() {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     
@@ -28,7 +26,7 @@
 
   initTheme();
 
-  // DOMが読み込まれた後に監視をはじめる
+  // DOMが読み込まれた後に監視を開始
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', watchSystemTheme);
   } else {

@@ -1,0 +1,65 @@
+:root {
+  color-scheme: light;
+
+  /* Base Colors */
+  --*: initial;
+
+  /* Brand Colors */
+  --color-brand-100: oklch(0.93 0.05 250);
+  --color-brand-400: oklch(0.75 0.16 250);
+  --color-brand-500: oklch(0.65 0.2 250);
+  --color-brand-600: oklch(0.58 0.18 250);
+  --color-brand-700: oklch(0.48 0.15 250);
+  --color-brand-900: oklch(0.35 0.15 250);
+
+  /* Semantic Colors */
+  --color-surface: var(--color-white);
+  --color-surface-secondary: var(--color-gray-50);
+  --color-surface-tertiary: var(--color-gray-100);
+
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-600);
+  --color-text-muted: var(--color-gray-500);
+
+  --color-border-primary: var(--color-gray-200);
+  --color-border-focus: var(--color-brand-500);
+
+  --color-accent-primary: var(--color-brand-500);
+  --color-accent-secondary: var(--color-brand-100);
+
+  /* Font */
+  --font-display: "Inter", "Helvetica Neue", sans-serif;
+  --font-body: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    sans-serif;
+
+  /* Shadow */
+  --shadow-soft: 0 2px 8px -2px rgb(0 0 0 / 0.1);
+  --shadow-medium: 0 4px 16px -4px rgb(0 0 0 / 0.15);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  
+  --color-surface: var(--color-gray-900);
+  --color-surface-secondary: var(--color-gray-800);
+  --color-surface-tertiary: var(--color-gray-700);
+  
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: var(--color-gray-300);
+  --color-text-muted: var(--color-gray-400);
+  
+  --color-border-primary: var(--color-gray-700);
+  --color-border-focus: var(--color-brand-400);
+  
+  --color-accent-primary: var(--color-brand-400);
+  --color-accent-secondary: var(--color-brand-900);
+  
+  /* Shadow */
+  --shadow-soft: 0 2px 8px -2px rgb(0 0 0 / 0.3);
+  --shadow-medium: 0 4px 16px -4px rgb(0 0 0 / 0.4);
+}
