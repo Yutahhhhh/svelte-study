@@ -14,61 +14,27 @@
   }
 </script>
 
-<div class="counter">
-  <h2>Svelte Counter Component</h2>
-  <p class="count">Count: {count}</p>
-  <div class="buttons">
-    <button onclick={increment}>+</button>
-    <button onclick={decrement}>-</button>
-    <button onclick={reset}>Reset</button>
+<div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-lg">
+  <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Svelte Counter Component</h2>
+  <p class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Count: {count}</p>
+  <div class="flex gap-3 justify-center">
+    <button 
+      onclick={increment}
+      class="bg-green-500 hover:bg-green-600 text-white font-medium px-4 py-2 rounded transition-colors duration-200"
+    >
+      +
+    </button>
+    <button 
+      onclick={decrement}
+      class="bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded transition-colors duration-200"
+    >
+      -
+    </button>
+    <button 
+      onclick={reset}
+      class="bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded transition-colors duration-200"
+    >
+      Reset
+    </button>
   </div>
 </div>
-
-<style lang="scss">
-  .counter {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem 0;
-    text-align: center;
-  }
-
-  .count {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 1rem 0;
-  }
-
-  .buttons {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-  }
-
-  button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-
-    &:first-child {
-      background: #28a745;
-      color: white;
-    }
-
-    &:nth-child(2) {
-      background: #dc3545;
-      color: white;
-    }
-
-    &:last-child {
-      background: #007bff;
-      color: white;
-    }
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-</style>
