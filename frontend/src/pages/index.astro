@@ -1,0 +1,38 @@
+---
+import Counter from '../components/Counter.svelte';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro + Svelte Demo</title>
+	</head>
+	<body>
+		<main>
+		  <h1>Astro + Svelte 開発環境</h1>
+		  <Counter client:load />
+		</main>
+
+		<style>
+		  body {
+		    font-family: system-ui, sans-serif;
+		    max-width: 800px;
+		    margin: 0 auto;
+		    padding: 2rem;
+		    line-height: 1.6;
+		  }
+		  
+		  main {
+		    text-align: center;
+		  }
+		  
+		  h1 {
+		    color: #333;
+		    margin-bottom: 1rem;
+		  }
+		</style>
+	</body>
+</html>

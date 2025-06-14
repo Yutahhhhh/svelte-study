@@ -1,0 +1,56 @@
+{
+  "name": "Astro + Svelte Development",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true,
+      "username": "node",
+      "userUid": "automatic",
+      "userGid": "automatic"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // 基本開発
+        "astro-build.astro-vscode",
+        "svelte.svelte-vscode",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next",
+        "ms-vscode.vscode-json",
+        // HTML/CSS
+        "formulahendry.auto-rename-tag",
+        "christian-kohler.path-intellisense",
+        "ecmel.vscode-html-css",
+        // Git & GitHub
+        "github.copilot",
+        "github.copilot-chat",
+        "github.vscode-github-actions",
+        // デバッグ・テスト
+        "ms-vscode.vscode-jest"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit"
+        },
+        "emmet.includeLanguages": {
+          "astro": "html"
+        },
+        "prettier.documentSelectors": [
+          "**/*.astro"
+        ]
+      }
+    }
+  },
+  "postCreateCommand": "npm install -g pnpm@latest",
+  "remoteUser": "node",
+  "mounts": [
+    "source=${localWorkspaceFolder}/.devcontainer/cache,target=/home/node/.cache,type=bind,consistency=cached"
+  ]
+}
