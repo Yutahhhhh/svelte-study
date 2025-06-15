@@ -1,3 +1,5 @@
 docs
 .devcontainer/cache
 .clinerules/
+./output.sh
+./output.txt
